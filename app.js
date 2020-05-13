@@ -7,11 +7,11 @@ function getNum(){
         console.log(parseInt(num1,10));
         document.getElementById("message1").innerHTML = "Number 1 input" + num1 + " is not a valid number.";
         document.getElementById("result").innerHTML = "";
-        document.getElementById("message1").style.color = "red";
+        document.getElementById("message2").style.color = "red";
         document.getElementById("result").style.color = "red";
     }
     if (num2 <= 2 || num2 >= 100){
-        document.getElementById("message").innerHTML = "Number 1 input" + num2 + " is not a valid number.";
+        document.getElementById("message1").innerHTML = "Number 1 input" + num2 + " is not a valid number.";
         document.getElementById("result").innerHTML = "";
         document.getElementById("message2").style.color = "red";
         document.getElementById("result").style.color = "red";

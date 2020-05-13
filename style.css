@@ -27,3 +27,8 @@ form{
     max-width: 70vw;
     min-width: 70vw;
 }
+
+label{
+    display: block;
+    text-align: center;
+}
