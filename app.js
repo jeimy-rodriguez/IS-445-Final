@@ -1,30 +1,25 @@
-function primeNum(){
+function getNum(){
     var num1 = parseInt(document.getElementById("num1").value);
     var num2 = parseInt(document.getElementById("num2").value);
 
-    // check if the numbers are within criteria
-    if (num1 <= 2 || num1 >= 100 || num2 <= 2 || num2 >= 100){
-        document.getElementById("message").innerHTML = "Invalid input, please try again.";
+    // check if the numbers fit criteria
+    if (num1 <= 2 || num1 >= 100){
+        console.log(parseInt(num1,10));
+        document.getElementById("message").innerHTML += "Number 1 input" + num1 + " is not a valid number.";
+        document.getElementById("result").innerHTML = "";
+    }
+    if (num2 <= 2 || num2 >= 100){
+        document.getElementById("message").innerHTML += "Number 1 input" + num2 + " is not a valid number.";
+        document.getElementById("result").innerHTML = "";
     }
     else if (num1 >= 2 && num1 <= 100 && num2 >= 2 && num2 <= 100){
-        calculatePrimeNum(num1,num2);
+        calculateEvenNum(num1,num2);
     }
 }
-function isPrime(num){
-    var res = true;
-    for (var i=2; i<=Math.ceil(num/2); i++){
-        if((num%i)==0){
-            res = false;
-            break;
-        }
-    }
-    return res;
-}
-function calculatePrimeNum(firstNum,secondNum){
-    var numArray = [];
+function calculateEvenNum(firstNum, secondNum){
+    var eNumArray = [];
     var sNum = 0;
     var bNum = 0;
-
 
     if (firstNum > secondNum){
         sNum = secondNum;
@@ -35,24 +30,29 @@ function calculatePrimeNum(firstNum,secondNum){
         bNum = secondNum;
     }
 
-    console.log(sNum);
-    console.log(bNum);
-
     while(sNum <= bNum){
-        console.log("in while");
-
-        console.log(isPrime(3));
-        if(isPrime(sNum) == true){
-            console.log(sNum);
-            numArray.push(sNum);
+        if(isEven(sNum) == true){
+            eNumArray.push(sNum);
             sNum = sNum + 1;
         }
-        else if (isPrime(sNum) == false){
-            console.log(sNum);
+        else if (isEven(sNum) == false){
             sNum = sNum + 1;
         }
     }
-    console.log(numArray);
-    document.getElementById("primeNumber").innerHTML = "There are " + numArray.length +" prime numbers.";
-    document.getElementById("message").innerHTML = numArray;
+    console.log(eNumArray);
+    document.getElementById("result").innerHTML = "There are " + eNumArray.length +" even numbers:";
+    document.getElementById("message").innerHTML = eNumArray;
+}
+
+function isEven(num) {
+    res = true;
+    for (var i=num; i<=num+1; i++){
+        if (num%2 == 0){
+            res = true;
+        }
+        else{
+            res = false;
+        }
+        return res;
+    }
 }

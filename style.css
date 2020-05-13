@@ -1,4 +1,4 @@
-#message{
+/*#message{
     color: red;
     text-align: center;
 }
@@ -50,7 +50,7 @@ span {
     margin: auto;
     text-align: center;
     
-}
+}*/
 input {
     border: 1px solid grey; 
     padding: 5px; 
