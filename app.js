@@ -5,15 +5,22 @@ function getNum(){
     // check if the numbers fit criteria
     if (num1 <= 2 || num1 >= 100){
         console.log(parseInt(num1,10));
-        document.getElementById("message").innerHTML += "Number 1 input" + num1 + " is not a valid number.";
+        document.getElementById("message1").innerHTML += "Number 1 input" + num1 + " is not a valid number.";
         document.getElementById("result").innerHTML = "";
+        document.getElementById("message1").style.color = "red";
+        document.getElementById("result").style.color = "red";
     }
     if (num2 <= 2 || num2 >= 100){
         document.getElementById("message").innerHTML += "Number 1 input" + num2 + " is not a valid number.";
         document.getElementById("result").innerHTML = "";
+        document.getElementById("message2").style.color = "red";
+        document.getElementById("result").style.color = "red";
+        document.getElementById("array").innerHTML = "";
     }
     else if (num1 >= 2 && num1 <= 100 && num2 >= 2 && num2 <= 100){
         calculateEvenNum(num1,num2);
+        document.getElementById("message1").innerHTML = "";
+        document.getElementById("message2").innerHTML = "";
     }
 }
 function calculateEvenNum(firstNum, secondNum){
@@ -40,8 +47,11 @@ function calculateEvenNum(firstNum, secondNum){
         }
     }
     console.log(eNumArray);
+    document.getElementById("array").style.color = "blue";
+    document.getElementById("result").style.color = "blue";
     document.getElementById("result").innerHTML = "There are " + eNumArray.length +" even numbers:";
-    document.getElementById("message").innerHTML = eNumArray;
+    document.getElementById("array").innerHTML = eNumArray;
+
 }
 
 function isEven(num) {
