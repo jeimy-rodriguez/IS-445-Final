@@ -12,22 +12,23 @@
         <h1 class = "text-danger text-center">Final Exam</h1>
         <h2 class = "text-light text-center"> Find all even numbers between two numbers</h2>
     </div>  
-    <form class = "text-success text-center">
+    <form>
         <div id = "formDiv">
             <div id = "div1">
             <label for = "num1" class = "text-success"> Number 1:</label>
-            <input type = "number" id = "num1" class = "text-success"></input>
+            <input id = "num1" class = "text-success form-control"></input>
         </div>
             <div id="div2">
                 <label for = "num2" class = "text-success">Number 2:</label>
-                <input type = "number" id = "num2" ></input>
+                <input id = "num2" class = "text-success form-control"></input>
             </div>
         </div>
-        <button id="submit" class="btn-primary-warning text-center">Submit</button>
-        <h3>Calculation Result:</h3>
-        <div id="resultDiv"></div>
-        <p id = "result">Result</p>
-        <p id = "message">Message</p>
+        <button type="button" id="submit" class="btn-primary-warning text-center" onclick = "getNum()">Submit</button>
+        <h3 class = "text-success">Calculation Result:</h3>
+        <p id ="result"></p>
+        <p id ="message1"></p>
+        <p id ="message2"></p>
+        <p id ="array"></p>
     </form>
     <script src="app.js"></script>
 </body>

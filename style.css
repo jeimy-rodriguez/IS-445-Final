@@ -27,9 +27,9 @@ form{
     min-width: 80vw;
     margin-top: 1vh;
 }
-
+*/
 button{
-    color: teal;
+    color: gold;
     background-color: white;
     padding: 5px;
     border: 2px solid teal;
@@ -37,20 +37,6 @@ button{
     display: block;
 }
 
-label { 
-    float: left; 
-    display: block;
-    padding: 5px;
-    margin: auto; 
-   justify-content: center;
-}
-span { 
-    display: block; 
-    padding: 5px; 
-    margin: auto;
-    text-align: center;
-    
-}*/
 input {
     border: 1px solid grey; 
     padding: 5px; 
