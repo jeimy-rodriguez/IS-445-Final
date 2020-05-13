@@ -1,0 +1,73 @@
+#message{
+    color: red;
+    text-align: center;
+}
+#primeNumber{
+    color: teal;
+    text-align: center;
+}
+
+#container{
+    text-align: center;
+    background-color: teal;
+    color: white;
+    padding: 15px;
+}
+
+body{
+    font-family: Arial;
+}
+form{
+    padding: 10px;
+    margin: auto;
+    place-content: center;
+    text-align: left;
+    min-height: 5vh;
+    max-width: 80vw;
+    min-width: 80vw;
+    margin-top: 1vh;
+}
+
+button{
+    color: teal;
+    background-color: white;
+    padding: 5px;
+    border: 2px solid teal;
+    margin: auto;
+    display: block;
+}
+
+label { 
+    float: left; 
+    display: block;
+    padding: 5px;
+    margin: auto; 
+   justify-content: center;
+}
+span { 
+    display: block; 
+    padding: 5px; 
+    margin: auto;
+    text-align: center;
+    
+}
+input {
+    border: 1px solid grey; 
+    padding: 5px; 
+    display: block;
+    margin: auto;
+    min-height: 3vh;
+    max-width: 70vw;
+    min-width: 70vw;
+    padding-left: 1vw;
+}
+
+form{
+    padding: 10px;
+    margin: auto;
+    place-content: center;
+    text-align: left;
+    min-height: 3vh;
+    max-width: 70vw;
+    min-width: 70vw;
+}
